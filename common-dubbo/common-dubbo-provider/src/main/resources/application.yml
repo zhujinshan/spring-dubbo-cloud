@@ -1,0 +1,45 @@
+server:
+  port: 8080
+dubbo:
+  application:
+    name: dubbo-provider
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+    name: dubbo
+    port: 20880
+  provider:
+    timeout: 10000
+spring:
+  application:
+    name: dubbo-provider
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: root
+    hikari:
+      connection-init-sql: set names utf8mb4
+      maximum-pool-size: 100
+      minimum-idle: 50
+      connection-timeout: 3000
+      pool-name: DatebookHikariCP
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.lucky.dubbo.model
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+mapper:
+  not-empty: true
+  before: true
+  mappers:
+    - tk.mybatis.mapper.common.Mapper
+debug: true
+
+
+
