@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @Author: jinshan.zhu
  * @Date: 2019/1/21 14:17
  */
-@FeignClient(path = "user-service")
+@FeignClient(name = "user-service")
 public interface UserClient {
 
     @GetMapping(name = "获取用户", path = "user/get")
