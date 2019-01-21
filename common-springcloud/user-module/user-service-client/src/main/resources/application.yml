@@ -1,0 +1,4 @@
+user-service:
+  ribbon:
+    readTimeout: 3000
+    connectTimeout: 3000
