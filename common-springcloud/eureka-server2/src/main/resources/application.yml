@@ -15,3 +15,5 @@ eureka:
     #fetchRegistry: false
   server:
     waitTimeInMsWhenSyncEmpty: 0
+    enable-self-preservation: true #设为false，关闭自我保护，从而保证会注销微服务
+    eviction-interval-timer-in-ms: 4000 #清理间隔

@@ -15,6 +15,7 @@
     <modules>
         <module>eureka-server1</module>
         <module>eureka-server2</module>
+        <module>user-module</module>
     </modules>
 
     <dependencyManagement>
